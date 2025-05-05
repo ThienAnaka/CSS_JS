@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: flex và position</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- font -->
+    <p>
+        Quang Trung Nguyễn Huệ là 2 anh em, đó là người nào nói vậy
+        còn tôi, thì họ là 1 người duy nhất 
+    </p>
+
+    <div class="demo-sticky">Tôi là sticky</div>
+    <!-- flex 
+     C1: inline-block + font-size
+     C2: float + clearfix
+
+     2015: flex | Grid Jqery
+     flex: thay thế cho các cách chia layout cũ
+     +justify là trục chính, chỉ có "justify-content"
+                *justify-content:căn chỉnh các vật thể theo trục chính của các hàng 
+
+     +align là trục phụ, có thể có "align-content" hoặc "align-items"
+        align-items:căn chỉnh các vật thể theo trục phụ của cả khối 
+        align-self chỉ đc dùng trong div con: đc dùng để căn chỉnh theo trục phụ của 
+                                              1 đối tượng duy nhất 
+
+     content: là điều khiển khoảng hở giữa các khối item
+     items: là điều khiển cả khối các items cùng dịch chuyển
+            (ko có space-between và space-around)
+
+    wrap-reverse và column-reverse khá giống nhau và hay đi chung với nhau 
+    
+    
+    Order:vị trí tất cả mọi thứ đều = 0, 
+        -1 lên đầu hàng | 1 xuống cuối hàng
+     -->
+    <!-- demo dùng flex cơ bản -->
+    <div class="cha">
+        <div class="con1"></div>
+        <div class="con2"></div>
+    </div>
+
+    <!-- demo flex lần 2 -->
+    <div class="chu">
+        <div class="chau">
+            <h1>Anh cháu rất quý cô chắc</h1>
+            <p>nhà anh cháu bến trái nhà của cô chắc</p>
+            <p>mà chắc có vẻ như cô chắc không mấy thiện cảm với anh cháu</p>
+        </div>
+        
+        <div class="chac">
+            <h1>Nhà cô chắc bên phải nhà anh Cháu</h1>
+            <p>Cô chắc biết anh cháu rất quý mình</p>
+            <p>nhưng chắc là chắc chắc không thích anh Cháu</p>
+            <p>vì anh Cháu dùng dép đôn chề</p>
+            <p>
+                anh Cháu còn chơi chung với jonny đen và anh Cáo <br> 
+                họ cùng nhau dùng đồng dbrr <br>
+                anh Cháu dù mặc envisu nhưng hàng kim biên 
+            </p>
+        </div>
+    </div>
+    
+    <!-- demo position -->
+    <div class="big-div">
+        <div class="small-div">Tôi là div nhỏ</div>
+        <p>
+            Ahihi xin chào cuộc đời <br/>
+            dù nhiều lần làm cho ta chơi vơi <br/>
+            tuy học ít nhưng chơi cũng nhiều <br/>
+            chiều ăn bánh tối vào hang <br/>
+            Ahihi xin chào cuộc đời <br/>
+            dù nhiều lần làm cho ta chơi vơi <br/>
+        </p>
+    </div>
+
+    <!-- btn-fb
+      làm 1 cái nút -->
+    <div class="btn-fb">
+        <div class="icon">F</div>
+    </div>
+
+    <!-- pseudo  element-->
+    <div class="ahihi">Xin chào</div>
+    
+    <!-- siêu button -->
+    <button class="demo-btn">BUTTON</button>
+
+    <!-- ko quan tâm  -->
+    <div style="height: 100vh;"></div>
+</body>
+</html>

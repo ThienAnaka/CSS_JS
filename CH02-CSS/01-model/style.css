@@ -1,0 +1,119 @@
+/* reset css */
+/* QUAN TRỌNG: TẤT CẢ PROJECT SAU NÀY ĐỀU PHẢI CÓ 
+    3 CÁI NÀY
+    Ko reset thì sẽ khó để căn chỉnh các vật thể */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* -border-box: tính đối tượng từ viền + content(là 1 bề ngang)
+         tính toán dễ dàng hơn
+       -content-box: tính nội dung bên trong  */
+}
+
+/* Nếu ng dùng chỉnh cỡ chữ trên web thì nó sẽ ăn theo html. 
+    nếu để mặc định 16px thì ng dùng ko h chỉnh cỡ chữ đc vì 16px là chỉnh cứng */
+html {
+  font-size: 62.5%; /* chỉ lấy 62.5% của 16px là 10px*/
+  /* dùng % để ko bị cứng vì 1 con số */
+  font-family: sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+/* unit size: đơn vị đo
+    px | mm | cm (hot unit) 3 đơn vị cứng
+    %: ăn theo thằng cha 
+    em: coi font-size của tk cha là 1 đơn vị (khó kiểm soát, càng nhìu lớp thì càng mệt)
+    rem: coi font-size mặc định(16px) của html là 1 đơn vị 
+     */
+
+/* Khối bao gồm border đi vô, ko bao gồm margin*/
+/* outline */
+.demo-ipt {
+  outline: none;
+  margin: 2rem;
+  padding: 1rem;
+  border: 2px solid red;
+  outline: 2px solid blue;
+  outline-offset: 1rem;
+  /* outline-offset: khoảng cách từ outline đến border */
+  /* outline ko ảnh hưởng đến vật thể */
+}
+
+/* border */
+.demo-border {
+  border: 3px solid teal;
+
+  border-top: 3px solid red;
+  border-left: 3px solid yellow;
+  border-right: 3px solid blue;
+  border-bottom: 3px solid rebeccapurple;
+  border-radius: 0.5rem;
+}
+/* 1 vật thể có chìu rộng và chìu ngang nếu 1 trong 2 
+    chìu rộng và chìu ngang nhỏ đến mức đạt về kích thước = 0 
+    thì vật thể vẫn ở đó, chỉ là mắt thường ko nhìn đc */
+.circle {
+  text-align: left;
+  height: 30rem;
+  width: 30rem;
+  background-color: yellow;
+  border-radius: 50%;
+
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+/* triangle */
+.triangle {
+  border: 3px solid red;
+  height: 15rem;
+  width: 15rem;
+  border-top: 7.5rem solid transparent;
+  border-left: 7.5rem solid transparent;
+  border-right: 7.5rem solid transparent;
+  border-bottom: 7.5rem solid rebeccapurple;
+}
+/* Màu trong suốt là transparent */
+
+/* demo-text */
+.demo-text {
+  color: steelblue;
+  background-color: bisque;
+  font-size: 3rem;
+  /* direction: rtl; */
+
+  text-decoration: underline solid chartreuse;
+  /* text decoration: where(ở đâu)  style(kiểu gì) color(màu sắc)*/
+  text-indent: 3rem;
+  /* thụt đầu dòng */
+
+  /* letter-spacing: 3rem; 
+        cách space mỗi từ*/
+
+  /* word-spacing: 3rem; 
+        cách space mỗi chữ*/
+
+  line-height: 10rem;
+  /* khoảng cách giữa các dòng( mặc định là 18px) */
+  font-family: sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 1px 1px 1px black;
+}
+
+.demo-text span {
+  vertical-align: sub;
+}

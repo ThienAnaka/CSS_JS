@@ -1,0 +1,140 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* demo background */
+/* vh: view height: chìu cao/độ cao của trình duyệt */
+.demo1-bg {
+  height: 100vh;
+  background-color: red;
+}
+
+.demo2-bg {
+  height: 100vh;
+  background-color: aquamarine;
+  background-image: url("./conmeo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* chỉnh bằng width và height thì hình sẽ
+        luôn bị bể */
+  background-attachment: fixed;
+}
+/* layout */
+/* CÁCH 1 */
+/* .parent{
+    border: 2px solid black;
+    font-size: 0;
+}
+
+.left-side{
+    border: 3px solid red;
+    display: inline-block;
+    font-size: 1.6rem;
+}
+
+.right-side{
+    border: 3px solid blue;
+    display: inline-block;
+    font-size: 1.6rem;
+} */
+
+.parent {
+  border: 2px solid transparent;
+}
+
+.left-side {
+  border: 3px solid red;
+  width: 30%;
+  float: left;
+}
+
+.right-side {
+  border: 3px solid blue;
+  width: 30%;
+  float: right;
+}
+
+/* ::(phần tử ảo) có kích thước bằng vs kích thước của 2 tk con
+    vô tình làm cho tk cha nghĩ nó đang ôm 2 tk con */
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+/* cách chia layout
+cách 1: font-size + display: inline-block
+    - set display inline-block cho 2 div con để chúng nó vừa đủ content
+    - hành động này giúp chúng nó lên cùng 1 hàng
+    - nhưng vì là inline-block nên div cha sẽ xem 2 tk con là 'từ' và tạo ra
+        khoảng trống nhỏ ở 2 div đó
+    - set font-size cho div cha về 0, để nó tin rằng nó ko chừa gì cả, sau đó
+        set font-size lại cho div 2 con để hiển thị
+    +Nhược điểm: Ko thể chia giao diện space between(có khoảng trắng ở giữa)
+    +Ưu điểm: Ko có
+
+cách 2: clearfix + float  
+    - set width theo nhu cầu của mik cho các div con
+    - thêm float: left - right tùy vào layout mik thích cho div con
+    - lúc này vì các div con đã float nên tk cha sẽ ko nhìn thấy đám con nữa
+    - nên mik phải thêm clearfix vào div cha để nó ôm 1 khối giống tk con
+*/
+
+/* dựng layout shopee */
+.container {
+  /* border: 3px solid red; */
+  height: 27rem;
+  max-width: 1320px;
+  /* nếu màn hình bự ra thì hình sẽ ko ăn theo(ko bị vỡ) */
+  margin: 0 auto;
+  /* 0: ko căn dọc lên xuống đc, auto: trái phải đều tăng
+        vô tình cái div này sẽ ra giữa   */
+}
+
+.left-side-banner {
+  /* border: 3px solid blue; */
+  width: calc(70% - 5px);
+  height: 100%;
+  float: left;
+  margin-right: 5px;
+}
+
+.right-side-banner {
+  /* border: 3px solid blue; */
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.right-side-img {
+  /* border: 3px solid green; */
+  height: calc(50% - 2.5px);
+}
+
+.right-side-img:nth-child(1) {
+  margin-bottom: 5px;
+}
+
+.img-block {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-block img {
+  display: block;
+  /* để hình ko bị hở */
+  width: 100%;
+  height: 100%;
+}

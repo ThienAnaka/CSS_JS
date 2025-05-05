@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 01: model</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!--  outline | border | circle | unit size | text | vertical line  -->
+    <!-- model box
+        margin(outline | outline offset) border -->
+
+    <!-- Hầu hết các thẻ đều ko có outline -->
+    <!-- outline khác vs border
+        thường xuất hiện ở thẻ input 
+        ko ảnh hưởng tới model box(đây là cấu trúc của 1 thẻ,1 đối tượng)
+        margin > (outline > outline-offset) > border > padding > content
+
+        **outline giống như là 1 hình dáng chứ ko phải 1 vật thể 
+        ****model box và outline là 2 layer khác nhau
+        -->
+    <input class="demo-ipt" type="text" />
+    <div class="demo-border">demo-border</div>
+
+    <div style="background-color: red; width: 50%">
+      <div class="circle">circle</div>
+    </div>
+
+    <div class="triangle"></div>
+
+    <!-- text -->
+    <p class="demo-text">
+      Xin chào bạn, <span>M</span>ình tên là Điệp đẹp trai, còn các bạn trong
+      lớp đều ế
+    </p>
+
+    <div style="height: 100vh"></div>
+  </body>
+</html>
